@@ -1,0 +1,41 @@
+1.
+  # codeforce 4a (watermelon)
+
+w=int(input())
+if w%2!=0 or w==2 :
+    print("No")
+else:
+    print("Yes")
+
+# codeforce 671A (elephant)
+x=int(input())
+if x<5:
+    print(x)
+elif x%5==0:
+    print(x//5)
+else:
+    print(x//5+1)
+
+2.
+#code force 719a ( bear and big brother)
+
+limak,bob=map(int,input().split())
+year=0
+while limak<=bob:
+     limak*=3
+     bob*=2
+     year+=1
+print(year)
+          
+3.
+# codeforce 466a ( Ann- subway)
+#n=total no of travel
+#m=total days for using spcl card
+#a=cost of normal ticket
+#b=cost of spcl card
+n,m,a,b=map(int,input().split())
+if a*m<b:
+    print(a*n)
+else:
+    print(((n//m)*b) +min(b,(n%m)*a))    
+            

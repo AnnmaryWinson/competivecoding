@@ -1,0 +1,129 @@
+1.
+#reverse a num
+n=int(input())
+rev=0
+while n:
+    d=n%10
+    rev=rev*10+d
+    n=n//10
+print(rev)
+  
+2.
+#armstrong num
+n=int(input())
+r=0;
+c=0;
+m=n
+while n:
+    d=n%10
+    c=c+1
+    n=n//10
+n=m
+while n>0:
+    d=n%10
+    r=r+d**c
+    n=n//10
+if(r==m):
+   print("armstrong")
+else:
+   print(" not armstrong")
+  
+3.
+#codeforce 1560a
+t=int(input())
+for i in range(t)
+    n=int(input())
+    i=0
+    k=0
+    while 1:
+        if i%3!=0 or i%10!=3:
+            if n==k:
+                print(i)
+                break
+            k=k+1
+        i=i+1
+  
+4.
+# sum of series 21342 = 2^5 +1^4 +3^3 +4^2+2^1
+n=int(input())
+s=0
+c=1
+m=n
+
+while n>0:
+    d=n%10
+    s=s+d**c
+    n//10
+    c=c+1
+print(s)
+
+
+5.
+n=int(input())
+s=0
+c=1
+m=n
+while n:
+    d=n%10
+    c=c+1
+    n=n//10
+n=m
+while n>0:
+    d=n%10
+    s=s+d**c
+    n//10
+    c=c-1
+print(s)
+  
+6.
+#prime num
+n=int(input())
+flag=0
+for i in range(2,int(n**0.5)+1):
+    if n%i==0:
+        flag=1
+        break
+    if flag==0:
+        print("prime")
+    else:
+        print("not prime")
+
+7.
+  l=[1,2,3,4,6,9]#slicing
+print(l[2:])
+print(l[2:5])
+print(l[1:4:2])#2 indicates the no. of steps - if 2 is chosen 1 step will be skipped
+print(l[::-1])# reverse the list
+
+8.
+l=input().split()
+
+res=[]
+for i in l:
+    if i not in res:
+        res.append(i)
+print(res)
+  
+9.
+l=input().split()
+
+res=[]
+for i in l:
+    if i not in res and l.count(i)%2!=0:
+        res.append(i)
+print(res)
+  
+10.
+  #even num in descending and odd in asecnding in a single list,use only one sort and one extra list
+l=input().split()
+l.sort()
+res=[]
+for in l:
+    if i%2!=0
+        res.append(i)
+    else
+        res.insert(0,i)
+print(res)
+
+
+  

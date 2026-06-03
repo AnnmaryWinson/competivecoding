@@ -1,0 +1,149 @@
+1.
+  #leetcode 66
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        for i in range (len(digits)-1,-1,-1):
+            if digits[i]==9:
+                digits[i]=0
+            else:
+                digits[i]=digits[i]+1
+                return digits
+        return [1]+digits
+          
+2.
+  #leetcode 136 (more complexity beacuse we used count)
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        for i in nums:
+          if nums.count(i)==1:
+            return i
+3.
+  #leetcode 136
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        x=0
+        for i in nums:
+           x= x^i
+        return x
+4.
+  #leetcode 268
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        l=len(nums)
+        x1,x2=0,0
+        for i in range(l+1): #actual xor value within the range
+            x1=x1^i
+        for i in nums:# xor of values in list
+            x2=x2^i
+        return x1^x2 #xor both to get the missing element
+
+
+        #or sort and find using num[i]+1!=num[i+1],then num[i]+1 is the value
+
+        #or very easy method _by finding sum of natural numbers
+            #(code below)
+5.
+  #leetcode 268
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+l=len(nums)
+s1=l*(l+1)
+s2=sum(nums) # sum is inbuilt func so need use for loop to calculate sum of input array
+return s1-s2
+6.
+  #leetcode 231 (power of two) another soln below uisng &
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n<1:
+            return false
+        while n:
+            if n==1:
+                return True
+            elif n%2!=0:
+                return False
+            else:
+                n=n//2
+7.
+          #Leetcode 231 using '&'
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n<1:
+            return False
+        if n&(n-1)==0:
+            return True
+        else:
+            return False
+
+8.
+        #greedy approach
+l=[2,3,4,3,7,3,5,4]
+m=0
+for i in l:
+    m=max(m,i)
+print(m)
+
+9.
+  #leetcode 55  (jump game)
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        petrol=0
+        for p in nums:
+            if petrol<0:
+                return False
+            elif p>petrol:
+                petrol=p
+            petrol-=1
+        return True
+
+10.
+    #find second largest number in list without using sort coz if duplicates are there sort wont work
+
+a=list(map(int,input().split()))
+max1=0
+max2=0
+for i in l:
+    if i>max1:
+        max2=max1
+        max1=i
+    elif i>max2 and i!=max1:
+        max2=i
+print(max2)
+
+    11.
+              n=int(input())
+v=list(map(int,input().split()))
+a=list(map(int,input().split()))
+c=[0]*(max(v))#initialise c with 0 -> no. of candidates are obtained by max of voters list
+for i in range(n):
+    if a[i]>=18:
+        c[v[i]-1]+=1 #here candidates start from 1 hence v[i]-1 -> to store frequency value at 0th index
+temp=sorted(c,reverse="True")#creates a copy of the list,if u want to sort the existing list use sort
+if temp[0]==temp[1]:
+    print(-1)
+else:
+    print(c.index(temp[0])+1)
+
+
+12.
+    #reverse a list without reverse function
+l=list(map(int,input().split()))
+length=len(l)
+j-=length
+for i in range( 0,len//2)
+    temp=l[i]
+    l[i]=l[j]
+    l[j]=temp
+    j-=
+print(l)
+
+  13.
+      #max frequency
+l=list(map(int,input().split()))
+d={}
+for i in l:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]+=1
+
+         
